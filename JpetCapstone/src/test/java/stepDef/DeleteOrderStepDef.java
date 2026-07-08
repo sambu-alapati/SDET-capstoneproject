@@ -20,7 +20,7 @@ public class DeleteOrderStepDef {
 	  
 	  
 	public void initializePages() {
-		driver=Hooks.driver;
+		driver=Hooks.getDriver();
 		deleteOrderPage=new JpetDeleteOrderPage(driver);
 	}
 	
@@ -32,39 +32,39 @@ public class DeleteOrderStepDef {
 public void user_clicks_on_my_orders() {
 
 	initializePages();
-	Hooks.test.info("Navigating to the My Orders management page.");
+	Hooks.getTest().info("Navigating to the My Orders management page.");
 	deleteOrderPage.clickMyOrders();
-	Hooks.test.pass("Successfully clicked on My Orders link.");
+	Hooks.getTest().pass("Successfully clicked on My Orders link.");
 }
 
 @When("user selects an existing order")
 public void user_selects_an_existing_order() {
-
-	Hooks.test.info("Selecting an active existing order from the history summary table.");
+	initializePages();
+	Hooks.getTest().info("Selecting an active existing order from the history summary table.");
 	deleteOrderPage.selectExistingOrder();
 
     deletedOrderId = deleteOrderPage.getSelectedOrderId();
-    Hooks.test.pass("Captured Target Order ID for deletion tracking: " + deletedOrderId);
+    Hooks.getTest().pass("Captured Target Order ID for deletion tracking: " + deletedOrderId);
 }
 
 @When("user clicks on the Delete Order button")
 public void user_clicks_on_the_delete_order_button() {
-
-	Hooks.test.info("Clicking the final Delete Order processing button.");
+	initializePages();
+	Hooks.getTest().info("Clicking the final Delete Order processing button.");
 	deleteOrderPage.clickDeleteOrder();
-	Hooks.test.pass("Delete order request dispatched.");
+	Hooks.getTest().pass("Delete order request dispatched.");
 }
 
 @Then("order should be deleted successfully")
 public void order_should_be_deleted_successfully() {
-
-	Hooks.test.info("Validating order history records to confirm deletion status of ID: " + deletedOrderId);
+	initializePages();
+	Hooks.getTest().info("Validating order history records to confirm deletion status of ID: " + deletedOrderId);
 	boolean isDeleted = deleteOrderPage.isOrderDeleted(deletedOrderId);
 	
 	if(isDeleted) {
-		Hooks.test.pass("Order records cleanup confirmed. Order ID " + deletedOrderId + " no longer exists.");
+		Hooks.getTest().pass("Order records cleanup confirmed. Order ID " + deletedOrderId + " no longer exists.");
 	} else {
-		Hooks.test.fail("Order deletion verification failed. Order ID " + deletedOrderId + " still present in tables.");
+		Hooks.getTest().fail("Order deletion verification failed. Order ID " + deletedOrderId + " still present in tables.");
 	}
 
     Assert.assertTrue(
@@ -76,22 +76,22 @@ public void order_should_be_deleted_successfully() {
 
 @Then("user should see no orders message {string}")
 public void user_should_see_no_orders_message(String expectedMessage) {
+	initializePages();
+	Hooks.getTest().info("Checking layout states to ensure zero orders exist for the profile context.");
+    if (Hooks.getDriver().getPageSource().contains("Order ID")
+            && Hooks.getDriver().getPageSource().contains("viewOrder")) {
 
-	Hooks.test.info("Checking layout states to ensure zero orders exist for the profile context.");
-    if (Hooks.driver.getPageSource().contains("Order ID")
-            && Hooks.driver.getPageSource().contains("viewOrder")) {
-
-    	Hooks.test.fail("Pre-condition assertion breakdown: Orders are still visible on screen. 'No Orders' message cannot show.");
+    	Hooks.getTest().fail("Pre-condition assertion breakdown: Orders are still visible on screen. 'No Orders' message cannot show.");
         Assert.fail("Orders are present for this user. No Orders message cannot be displayed.");
     }
 
-    Hooks.test.info("Reading text element message values. Expected message string value: [" + expectedMessage + "]");
+    Hooks.getTest().info("Reading text element message values. Expected message string value: [" + expectedMessage + "]");
     String actualMessage = deleteOrderPage.getNoOrdersMessage();
 
     if(expectedMessage.equals(actualMessage)) {
-    	Hooks.test.pass("Empty grid message placeholder verified successfully: " + actualMessage);
+    	Hooks.getTest().pass("Empty grid message placeholder verified successfully: " + actualMessage);
     } else {
-    	Hooks.test.fail("Empty history text mismatch. Expected: [" + expectedMessage + "] but found: [" + actualMessage + "]");
+    	Hooks.getTest().fail("Empty history text mismatch. Expected: [" + expectedMessage + "] but found: [" + actualMessage + "]");
     }
 
     Assert.assertEquals(expectedMessage, actualMessage);

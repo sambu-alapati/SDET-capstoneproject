@@ -1,27 +1,997 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="33" passed="25" failed="8" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-07-08T14:04:17 IST" name="Default suite" finished-at="2026-07-08T14:04:43 IST" duration-ms="25263">
+  <suite started-at="2026-07-08T17:41:05 IST" name="Default suite" finished-at="2026-07-08T17:44:28 IST" duration-ms="202965">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2026-07-08T14:04:17 IST" name="Default test" finished-at="2026-07-08T14:04:43 IST" duration-ms="25263">
+    <test started-at="2026-07-08T17:41:05 IST" name="Default test" finished-at="2026-07-08T17:44:28 IST" duration-ms="202965">
       <class name="runner.JpetRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T14:04:17 IST" name="setUpClass" finished-at="2026-07-08T14:04:18 IST" duration-ms="703" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:41:05 IST" name="setUpClass" finished-at="2026-07-08T17:41:06 IST" duration-ms="1027" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@5bda157e]]>
+                <![CDATA[org.testng.TestRunner@4bff2185]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T14:04:18 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T14:04:31 IST" duration-ms="13436" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:41:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:42:23 IST" duration-ms="76799" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Register new user with valid details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Registration"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:41:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:42:35 IST" duration-ms="88774" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User Searchbar Functionality for pet categories using Enter Key"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Home Page Functionalities"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element found by By.tagName: body to contain text "Amazon Parrot". Current text: "SAMPLE APPS
+GET INVOLVED
+MONITORING
+A FULL-STACK SAMPLE WEB APPLICATION BUILT ON TOP OF ASPECTRAN AND MYBATIS
+JPetStore Demo
+The goal of the JPetStore Demo App is to provide and demonstrate a sample web application that leverages Aspectran and MyBatis.
+Sample Apps
+JPetStore Demo
+Fish
+Dogs
+Reptiles
+Cats
+Birds
+AppMon
+?
+0 My Orders
+Search Results for "birds"
+Return to Main Menu
+Product ID Name Description
+aspectran.com
+mybatis.org
+ABOUT ASPECTRAN
+Aspectran is a lightweight, high‑performance framework for building both simple shell applications and large enterprise web services on the JVM.
+GET INVOLVED
+GitHub
+Copyright © 2008-present The Aspectran Project
+Powered by Aspectran 9.6.1-SNAPSHOT".
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 44936, ms:edgeOptions: {debuggerAddress: localhost:58178}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\SA2069~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58178/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 532ab87ccbb3db5acbab8d23b4dff1bf]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.tagName: body to contain text "Amazon Parrot". Current text: "SAMPLE APPS
+GET INVOLVED
+MONITORING
+A FULL-STACK SAMPLE WEB APPLICATION BUILT ON TOP OF ASPECTRAN AND MYBATIS
+JPetStore Demo
+The goal of the JPetStore Demo App is to provide and demonstrate a sample web application that leverages Aspectran and MyBatis.
+Sample Apps
+JPetStore Demo
+Fish
+Dogs
+Reptiles
+Cats
+Birds
+AppMon
+?
+0 My Orders
+Search Results for "birds"
+Return to Main Menu
+Product ID Name Description
+aspectran.com
+mybatis.org
+ABOUT ASPECTRAN
+Aspectran is a lightweight, high‑performance framework for building both simple shell applications and large enterprise web services on the JVM.
+GET INVOLVED
+GitHub
+Copyright © 2008-present The Aspectran Project
+Powered by Aspectran 9.6.1-SNAPSHOT".
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 44936, ms:edgeOptions: {debuggerAddress: localhost:58178}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\SA2069~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58178/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 532ab87ccbb3db5acbab8d23b4dff1bf
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+at stepDef.HomeStepDef.user_should_able_to_see_data_related_to_it_with_expected_text(HomeStepDef.java:109)
+at ✽.User Should able to see data related to it with expected text "Amazon Parrot"(file:///C:/Users/SA20696539/git/SDET-capstoneproject/JpetCapstone/src/test/java/features/03_JpetHome.feature:21)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:41:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:42:11 IST" duration-ms="65616" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Failed login with invalid or missing credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:41:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:41:56 IST" duration-ms="49751" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify mandatory field error messages"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Registration"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:41:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:41:54 IST" duration-ms="48529" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful user Logout"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:41:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:42:13 IST" duration-ms="67248" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Successful login with valid credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:41:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:42:25 IST" duration-ms="79273" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify existing user ID message"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Registration"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:41:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:41:54 IST" duration-ms="48530" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Failed login with invalid or missing credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="junit.framework.AssertionFailedError">
+            <full-stacktrace>
+              <![CDATA[junit.framework.AssertionFailedError
+at junit.framework.Assert.fail(Assert.java:55)
+at junit.framework.Assert.assertTrue(Assert.java:22)
+at junit.framework.Assert.assertTrue(Assert.java:31)
+at stepDef.LoginAndLogoutStepDef.they_should_see_an_error_message(LoginAndLogoutStepDef.java:138)
+at ✽.they should see an error message "Enter username"(file:///C:/Users/SA20696539/git/SDET-capstoneproject/JpetCapstone/src/test/java/features/02_JpetLoginAndLogout.feature:18)
+]]>
+            </full-stacktrace>
+          </exception> <!-- junit.framework.AssertionFailedError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:41:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:41:54 IST" duration-ms="48646" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Failed login with invalid or missing credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["User Login Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="junit.framework.AssertionFailedError">
+            <full-stacktrace>
+              <![CDATA[junit.framework.AssertionFailedError
+at junit.framework.Assert.fail(Assert.java:55)
+at junit.framework.Assert.assertTrue(Assert.java:22)
+at junit.framework.Assert.assertTrue(Assert.java:31)
+at stepDef.LoginAndLogoutStepDef.they_should_see_an_error_message(LoginAndLogoutStepDef.java:138)
+at ✽.they should see an error message "Enter password"(file:///C:/Users/SA20696539/git/SDET-capstoneproject/JpetCapstone/src/test/java/features/02_JpetLoginAndLogout.feature:18)
+]]>
+            </full-stacktrace>
+          </exception> <!-- junit.framework.AssertionFailedError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:41:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:42:33 IST" duration-ms="87474" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User Searchbar Functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Home Page Functionalities"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element found by By.tagName: body to contain text "Amazon Parrot". Current text: "SAMPLE APPS
+GET INVOLVED
+MONITORING
+A FULL-STACK SAMPLE WEB APPLICATION BUILT ON TOP OF ASPECTRAN AND MYBATIS
+JPetStore Demo
+The goal of the JPetStore Demo App is to provide and demonstrate a sample web application that leverages Aspectran and MyBatis.
+Sample Apps
+JPetStore Demo
+Fish
+Dogs
+Reptiles
+Cats
+Birds
+AppMon
+?
+0 My Orders
+Welcome Naga!
+Fish
+Saltwater, Freshwater
+Dogs
+Various Breeds
+Cats
+Various Breeds, Exotic Varieties
+Reptiles
+Lizards, Turtles, Snakes
+Birds
+Exotic Varieties
+Pet Favorites
+Shop for more of your favorite pets here.
+Angelfish
+Tiger Shark
+Koi
+Goldfish
+aspectran.com
+mybatis.org
+ABOUT ASPECTRAN
+Aspectran is a lightweight, high‑performance framework for building both simple shell applications and large enterprise web services on the JVM.
+GET INVOLVED
+GitHub
+Copyright © 2008-present The Aspectran Project
+Powered by Aspectran 9.6.1-SNAPSHOT".
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 49516, ms:edgeOptions: {debuggerAddress: localhost:61299}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\SA2069~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61299/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 18cea68ff911ff5ea9bc7d7a43fac62f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.tagName: body to contain text "Amazon Parrot". Current text: "SAMPLE APPS
+GET INVOLVED
+MONITORING
+A FULL-STACK SAMPLE WEB APPLICATION BUILT ON TOP OF ASPECTRAN AND MYBATIS
+JPetStore Demo
+The goal of the JPetStore Demo App is to provide and demonstrate a sample web application that leverages Aspectran and MyBatis.
+Sample Apps
+JPetStore Demo
+Fish
+Dogs
+Reptiles
+Cats
+Birds
+AppMon
+?
+0 My Orders
+Welcome Naga!
+Fish
+Saltwater, Freshwater
+Dogs
+Various Breeds
+Cats
+Various Breeds, Exotic Varieties
+Reptiles
+Lizards, Turtles, Snakes
+Birds
+Exotic Varieties
+Pet Favorites
+Shop for more of your favorite pets here.
+Angelfish
+Tiger Shark
+Koi
+Goldfish
+aspectran.com
+mybatis.org
+ABOUT ASPECTRAN
+Aspectran is a lightweight, high‑performance framework for building both simple shell applications and large enterprise web services on the JVM.
+GET INVOLVED
+GitHub
+Copyright © 2008-present The Aspectran Project
+Powered by Aspectran 9.6.1-SNAPSHOT".
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 49516, ms:edgeOptions: {debuggerAddress: localhost:61299}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\SA2069~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61299/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 18cea68ff911ff5ea9bc7d7a43fac62f
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+at stepDef.HomeStepDef.User_should_able_to_see_data_releated_to_it(HomeStepDef.java:83)
+at ✽.User Should able to see data related to it(file:///C:/Users/SA20696539/git/SDET-capstoneproject/JpetCapstone/src/test/java/features/03_JpetHome.feature:14)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:41:54 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:42:32 IST" duration-ms="37271" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User Searchbar Functionality for pet categories using Enter Key"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Home Page Functionalities"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:41:54 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:42:57 IST" duration-ms="62440" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User Searchbar Functionality for pet categories using Enter Key"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Home Page Functionalities"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element found by By.tagName: body to contain text "Manx". Current text: "SAMPLE APPS
+GET INVOLVED
+MONITORING
+A FULL-STACK SAMPLE WEB APPLICATION BUILT ON TOP OF ASPECTRAN AND MYBATIS
+JPetStore Demo
+The goal of the JPetStore Demo App is to provide and demonstrate a sample web application that leverages Aspectran and MyBatis.
+Sample Apps
+JPetStore Demo
+Fish
+Dogs
+Reptiles
+Cats
+Birds
+AppMon
+?
+0 My Orders
+Search Results for "cats"
+Return to Main Menu
+Product ID Name Description
+aspectran.com
+mybatis.org
+ABOUT ASPECTRAN
+Aspectran is a lightweight, high‑performance framework for building both simple shell applications and large enterprise web services on the JVM.
+GET INVOLVED
+GitHub
+Copyright © 2008-present The Aspectran Project
+Powered by Aspectran 9.6.1-SNAPSHOT".
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 50192, ms:edgeOptions: {debuggerAddress: localhost:56889}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\SA2069~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56889/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a3a45b5fec97bd5e1343b1a7ee12c60c]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.tagName: body to contain text "Manx". Current text: "SAMPLE APPS
+GET INVOLVED
+MONITORING
+A FULL-STACK SAMPLE WEB APPLICATION BUILT ON TOP OF ASPECTRAN AND MYBATIS
+JPetStore Demo
+The goal of the JPetStore Demo App is to provide and demonstrate a sample web application that leverages Aspectran and MyBatis.
+Sample Apps
+JPetStore Demo
+Fish
+Dogs
+Reptiles
+Cats
+Birds
+AppMon
+?
+0 My Orders
+Search Results for "cats"
+Return to Main Menu
+Product ID Name Description
+aspectran.com
+mybatis.org
+ABOUT ASPECTRAN
+Aspectran is a lightweight, high‑performance framework for building both simple shell applications and large enterprise web services on the JVM.
+GET INVOLVED
+GitHub
+Copyright © 2008-present The Aspectran Project
+Powered by Aspectran 9.6.1-SNAPSHOT".
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 50192, ms:edgeOptions: {debuggerAddress: localhost:56889}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\SA2069~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56889/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a3a45b5fec97bd5e1343b1a7ee12c60c
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+at stepDef.HomeStepDef.user_should_able_to_see_data_related_to_it_with_expected_text(HomeStepDef.java:109)
+at ✽.User Should able to see data related to it with expected text "Manx"(file:///C:/Users/SA20696539/git/SDET-capstoneproject/JpetCapstone/src/test/java/features/03_JpetHome.feature:21)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:41:54 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:42:56 IST" duration-ms="61313" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User Searchbar Functionality for pet categories using Enter Key"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Home Page Functionalities"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element found by By.tagName: body to contain text "Bulldog". Current text: "SAMPLE APPS
+GET INVOLVED
+MONITORING
+A FULL-STACK SAMPLE WEB APPLICATION BUILT ON TOP OF ASPECTRAN AND MYBATIS
+JPetStore Demo
+The goal of the JPetStore Demo App is to provide and demonstrate a sample web application that leverages Aspectran and MyBatis.
+Sample Apps
+JPetStore Demo
+Fish
+Dogs
+Reptiles
+Cats
+Birds
+AppMon
+?
+0 My Orders
+Search Results for "dogs"
+Return to Main Menu
+Product ID Name Description
+aspectran.com
+mybatis.org
+ABOUT ASPECTRAN
+Aspectran is a lightweight, high‑performance framework for building both simple shell applications and large enterprise web services on the JVM.
+GET INVOLVED
+GitHub
+Copyright © 2008-present The Aspectran Project
+Powered by Aspectran 9.6.1-SNAPSHOT".
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 30928, ms:edgeOptions: {debuggerAddress: localhost:55281}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\SA2069~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55281/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 45bf3ec74f592bba46fecf2b23f96c9d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.tagName: body to contain text "Bulldog". Current text: "SAMPLE APPS
+GET INVOLVED
+MONITORING
+A FULL-STACK SAMPLE WEB APPLICATION BUILT ON TOP OF ASPECTRAN AND MYBATIS
+JPetStore Demo
+The goal of the JPetStore Demo App is to provide and demonstrate a sample web application that leverages Aspectran and MyBatis.
+Sample Apps
+JPetStore Demo
+Fish
+Dogs
+Reptiles
+Cats
+Birds
+AppMon
+?
+0 My Orders
+Search Results for "dogs"
+Return to Main Menu
+Product ID Name Description
+aspectran.com
+mybatis.org
+ABOUT ASPECTRAN
+Aspectran is a lightweight, high‑performance framework for building both simple shell applications and large enterprise web services on the JVM.
+GET INVOLVED
+GitHub
+Copyright © 2008-present The Aspectran Project
+Powered by Aspectran 9.6.1-SNAPSHOT".
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 30928, ms:edgeOptions: {debuggerAddress: localhost:55281}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\SA2069~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55281/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 45bf3ec74f592bba46fecf2b23f96c9d
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+at stepDef.HomeStepDef.user_should_able_to_see_data_related_to_it_with_expected_text(HomeStepDef.java:109)
+at ✽.User Should able to see data related to it with expected text "Bulldog"(file:///C:/Users/SA20696539/git/SDET-capstoneproject/JpetCapstone/src/test/java/features/03_JpetHome.feature:21)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:41:56 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:42:57 IST" duration-ms="61333" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User Searchbar Functionality for pet categories using Enter Key"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Home Page Functionalities"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element found by By.tagName: body to contain text "Rattlesnake". Current text: "SAMPLE APPS
+GET INVOLVED
+MONITORING
+A FULL-STACK SAMPLE WEB APPLICATION BUILT ON TOP OF ASPECTRAN AND MYBATIS
+JPetStore Demo
+The goal of the JPetStore Demo App is to provide and demonstrate a sample web application that leverages Aspectran and MyBatis.
+Sample Apps
+JPetStore Demo
+Fish
+Dogs
+Reptiles
+Cats
+Birds
+AppMon
+?
+0 My Orders
+Search Results for "reptiles"
+Return to Main Menu
+Product ID Name Description
+aspectran.com
+mybatis.org
+ABOUT ASPECTRAN
+Aspectran is a lightweight, high‑performance framework for building both simple shell applications and large enterprise web services on the JVM.
+GET INVOLVED
+GitHub
+Copyright © 2008-present The Aspectran Project
+Powered by Aspectran 9.6.1-SNAPSHOT".
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 44496, ms:edgeOptions: {debuggerAddress: localhost:55581}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\SA2069~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55581/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2f9af0170454752ee5f6e5480882e7e3]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.tagName: body to contain text "Rattlesnake". Current text: "SAMPLE APPS
+GET INVOLVED
+MONITORING
+A FULL-STACK SAMPLE WEB APPLICATION BUILT ON TOP OF ASPECTRAN AND MYBATIS
+JPetStore Demo
+The goal of the JPetStore Demo App is to provide and demonstrate a sample web application that leverages Aspectran and MyBatis.
+Sample Apps
+JPetStore Demo
+Fish
+Dogs
+Reptiles
+Cats
+Birds
+AppMon
+?
+0 My Orders
+Search Results for "reptiles"
+Return to Main Menu
+Product ID Name Description
+aspectran.com
+mybatis.org
+ABOUT ASPECTRAN
+Aspectran is a lightweight, high‑performance framework for building both simple shell applications and large enterprise web services on the JVM.
+GET INVOLVED
+GitHub
+Copyright © 2008-present The Aspectran Project
+Powered by Aspectran 9.6.1-SNAPSHOT".
+(tried for 10 seconds with 500 milliseconds interval)
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 44496, ms:edgeOptions: {debuggerAddress: localhost:55581}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\SA2069~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55581/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2f9af0170454752ee5f6e5480882e7e3
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+at stepDef.HomeStepDef.user_should_able_to_see_data_related_to_it_with_expected_text(HomeStepDef.java:109)
+at ✽.User Should able to see data related to it with expected text "Rattlesnake"(file:///C:/Users/SA20696539/git/SDET-capstoneproject/JpetCapstone/src/test/java/features/03_JpetHome.feature:21)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:42:11 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:43:05 IST" duration-ms="53567" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User Searchbar Functionality for specific pet using Enter Key"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Home Page Functionalities"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:42:13 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:43:23 IST" duration-ms="69833" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Navbar Elements Navigation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Home Page Functionalities"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:42:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:43:36 IST" duration-ms="72990" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Image Navigation Functionality"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Home Page Functionalities"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:42:25 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:43:24 IST" duration-ms="58569" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["User Account Management"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Home Page Functionalities"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:42:32 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:43:26 IST" duration-ms="54365" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add single item to cart"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Shopping Cart Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:42:33 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:43:36 IST" duration-ms="62713" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Add multiple items to cart"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Shopping Cart Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:42:35 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:43:46 IST" duration-ms="71819" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Remove single item from cart"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Shopping Cart Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:42:56 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:44:05 IST" duration-ms="68837" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Remove all items from cart"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Shopping Cart Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:42:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:43:58 IST" duration-ms="60878" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Remove specific item from multiple items"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Shopping Cart Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:42:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:43:47 IST" duration-ms="50462" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Update quantity for single item"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Shopping Cart Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:43:05 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:44:06 IST" duration-ms="60635" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Update cart after multiple modifications"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Shopping Cart Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: stale element not found in the current frame
+  (Session info: MicrosoftEdge=150.0.4078.48)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [50dda8399d88a9ed8f9309c49d243d11, getElementAttribute {name=value, id=f.6F59E039756BB32932DA16DCA8630776.d.9963B57C16CFE98BB9C6886FB0C9E10B.e.189}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 38576, ms:edgeOptions: {debuggerAddress: localhost:51362}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\SA2069~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51362/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (50dda8399d88a9ed8f9309c49d243d11)] -> xpath: //input[@type='number']]
+Session ID: 50dda8399d88a9ed8f9309c49d243d11]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: MicrosoftEdge=150.0.4078.48)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [50dda8399d88a9ed8f9309c49d243d11, getElementAttribute {name=value, id=f.6F59E039756BB32932DA16DCA8630776.d.9963B57C16CFE98BB9C6886FB0C9E10B.e.189}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 38576, ms:edgeOptions: {debuggerAddress: localhost:51362}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\SA2069~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51362/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (50dda8399d88a9ed8f9309c49d243d11)] -> xpath: //input[@type='number']]
+Session ID: 50dda8399d88a9ed8f9309c49d243d11
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:143)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:224)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:217)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:600)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:225)
+at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:151)
+at pages.JpetCartPage.getQuantity(JpetCartPage.java:52)
+at stepDef.AddtoCartStepDef.quantity_should_be_updated_to(AddtoCartStepDef.java:215)
+at ✽.quantity should be updated to "4"(file:///C:/Users/SA20696539/git/SDET-capstoneproject/JpetCapstone/src/test/java/features/04_JpetCart.feature:65)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:43:23 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:44:12 IST" duration-ms="49078" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify checkout button is displayed"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Shopping Cart Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:43:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:44:12 IST" duration-ms="48557" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Complete checkout using default details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Checkout Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:43:26 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:44:13 IST" duration-ms="46592" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Complete checkout with modified billing details"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Checkout Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:43:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:44:17 IST" duration-ms="41272" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify order number generation"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Checkout Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:43:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:44:15 IST" duration-ms="39218" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify order details page"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Checkout Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:43:46 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:44:27 IST" duration-ms="41012" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Delete newly created order"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Checkout Functionality"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:43:47 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:44:13 IST" duration-ms="25170" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +1007,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T14:04:31 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T14:04:42 IST" duration-ms="11006" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:43:58 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2026-07-08T17:44:13 IST" duration-ms="15099" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -53,7 +1023,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T14:04:43 IST" name="tearDownClass" finished-at="2026-07-08T14:04:43 IST" duration-ms="63" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.JpetRunner@15f47664]" started-at="2026-07-08T17:44:27 IST" name="tearDownClass" finished-at="2026-07-08T17:44:28 IST" duration-ms="228" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

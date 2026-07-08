@@ -276,7 +276,7 @@
  
  
  
-    <plugin>
+   <plugin>
     <groupId>org.apache.maven.plugins</groupId>
     <artifactId>maven-surefire-plugin</artifactId>
     <version>3.3.0</version>
@@ -284,6 +284,16 @@
         <suiteXmlFiles>
             <suiteXmlFile>testng.xml</suiteXmlFile>
         </suiteXmlFiles>
+        
+        <!-- FORCE REJECTION OF MULTIPLIER: Keeps execution fixed to 3 total browsers -->
+        <perCoreThreadCount>false</perCoreThreadCount>
+        
+        <properties>
+            <property>
+                <name>dataproviderthreadcount</name>
+                <value>3</value> 
+            </property>
+        </properties>
     </configuration>
     <dependencies>
         <!-- This forces surefire to use TestNG instead of JUnit -->
@@ -293,8 +303,8 @@
             <version>3.3.0</version>
         </dependency>
     </dependencies>
-    </plugin>  
-    
+</plugin>
+
     
     
       </plugins>

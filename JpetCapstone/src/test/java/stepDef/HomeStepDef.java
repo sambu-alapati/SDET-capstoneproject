@@ -32,7 +32,7 @@ public class HomeStepDef {
      * synchronized session driver instance across fragmented test blocks.
      */
     private JpetHomePage getHomePage() {
-        this.driver = Hooks.driver;
+        this.driver = Hooks.getDriver();
         if (this.homePage == null) {
             this.homePage = new JpetHomePage(this.driver);
         }
@@ -47,7 +47,7 @@ public class HomeStepDef {
     public void user_enter_bird_in_searchbar(String text) {
          getHomePage(); // Synced driver reference allocation
          
-         Hooks.test.info("Entering text into searchbar: " + text);
+         Hooks.getTest().info("Entering text into searchbar: " + text);
          
          // Explicit wait shield to guarantee form input readiness
          WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -56,41 +56,41 @@ public class HomeStepDef {
          inputElement.clear();
          inputElement.sendKeys(text);
          
-         Hooks.test.pass("Search text entered successfully.");
+         Hooks.getTest().pass("Search text entered successfully.");
     }
 
     @And("Clicks the search button")
     public void Clicks_the_search_button() {
         getHomePage();
-        Hooks.test.info("Clicking the search button layout element.");
+        Hooks.getTest().info("Clicking the search button layout element.");
         
         // Dynamic wait check to clear timing mismatches
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement searchBtn = wait.until(ExpectedConditions.elementToBeClickable(searchButtonLocator));
         
         searchBtn.click();
-        Hooks.test.pass("Search button clicked and navigation dispatched.");
+        Hooks.getTest().pass("Search button clicked and navigation dispatched.");
     }
 
     @Then("User Should able to see data related to it")
     public void User_should_able_to_see_data_releated_to_it() {
         getHomePage();
         String expectedText = "Amazon Parrot"; 
-        Hooks.test.info("Verifying search results contain expected text: " + expectedText);
+        Hooks.getTest().info("Verifying search results contain expected text: " + expectedText);
         
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
             boolean isTextPresent = wait.until(ExpectedConditions.textToBePresentInElementLocated(By.tagName("body"), expectedText));
             
             if (isTextPresent) {
-                Hooks.test.pass("Search text validation successful. Found: " + expectedText);
+                Hooks.getTest().pass("Search text validation successful. Found: " + expectedText);
             } else {
-                Hooks.test.fail("Search text validation failed. Missing: " + expectedText);
+                Hooks.getTest().fail("Search text validation failed. Missing: " + expectedText);
             }
             
             Assert.assertTrue("BUG DETECTED: The page text did not contain the expected text: " + expectedText, isTextPresent);
         } catch (Exception e) {
-            Hooks.test.fail("Search validation step encountered an exception: " + e.getMessage());
+            Hooks.getTest().fail("Search validation step encountered an exception: " + e.getMessage());
             throw e;
         }
     }
@@ -102,7 +102,7 @@ public class HomeStepDef {
     @Then("User Should able to see data related to it with expected text {string}")
     public void user_should_able_to_see_data_related_to_it_with_expected_text(String expectedBreed) {
         getHomePage();
-        Hooks.test.info("Scanning page layout table for expected data string: [" + expectedBreed + "]");
+        Hooks.getTest().info("Scanning page layout table for expected data string: [" + expectedBreed + "]");
         
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         try {
@@ -111,15 +111,15 @@ public class HomeStepDef {
             );
             
             if (isTextPresent) {
-                Hooks.test.pass("Search results table verified successfully. Found target item: " + expectedBreed);
+                Hooks.getTest().pass("Search results table verified successfully. Found target item: " + expectedBreed);
             } else {
-                Hooks.test.fail("Search results layout verification failed. Missing text marker: " + expectedBreed);
+                Hooks.getTest().fail("Search results layout verification failed. Missing text marker: " + expectedBreed);
             }
             
             Assert.assertTrue("BUG DETECTED: The search results table did not contain the expected text: " + expectedBreed, isTextPresent);
             
         } catch (Exception e) {
-            Hooks.test.fail("Assertion step encountered an unexpected runtime exception: " + e.getMessage());
+            Hooks.getTest().fail("Assertion step encountered an unexpected runtime exception: " + e.getMessage());
             throw e;
         }
     }
@@ -131,14 +131,14 @@ public class HomeStepDef {
     @And("Presses the Enter key on the keyboard")
     public void Presses_the_Enter_key_on_the_keyboard() throws InterruptedException {
         getHomePage();
-        Hooks.test.info("Executing search bar interaction using keyboard Enter key.");
+        Hooks.getTest().info("Executing search bar interaction using keyboard Enter key.");
         
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement searchBox = wait.until(ExpectedConditions.elementToBeClickable(searchFieldLocator));
 
         // Submit the search query by executing native Selenium keyboard inputs directly on the active input element
         searchBox.sendKeys(org.openqa.selenium.Keys.ENTER);
-        Hooks.test.pass("Search action via Enter key processed.");
+        Hooks.getTest().pass("Search action via Enter key processed.");
     }
 
 
@@ -146,180 +146,180 @@ public class HomeStepDef {
 
     @When("user clicks the Bird navbar element and clicks return to main menu")
     public void user_clicks_the_bird_navbar_element_and_clicks_return_to_main_menu() throws InterruptedException {
-        driver = Hooks.driver;
+        driver = Hooks.getDriver();
         homePage = new JpetHomePage(driver);
         
-        Hooks.test.info("Clicking Bird navbar element and returning to main menu.");
+        Hooks.getTest().info("Clicking Bird navbar element and returning to main menu.");
         homePage.birdnavelement();
         homePage.returntomainmenu();
-        Hooks.test.pass("Bird navbar navigation sequence completed.");
+        Hooks.getTest().pass("Bird navbar navigation sequence completed.");
     }
 
     @When("user clicks the Cat navbar element and clicks return to main menu")
     public void user_clicks_the_cat_navbar_element_and_clicks_return_to_main_menu() {
-        driver = Hooks.driver;
+        driver = Hooks.getDriver();
         homePage = new JpetHomePage(driver);
         
-        Hooks.test.info("Clicking Cat navbar element and returning to main menu.");
+        Hooks.getTest().info("Clicking Cat navbar element and returning to main menu.");
         homePage.catnavelement();
         homePage.returntomainmenu();
-        Hooks.test.pass("Cat navbar navigation sequence completed.");
+        Hooks.getTest().pass("Cat navbar navigation sequence completed.");
     }
 
     @When("user clicks the Dog navbar element and clicks return to main menu")
     public void user_clicks_the_dog_navbar_element_and_clicks_return_to_main_menu() {
-        driver = Hooks.driver;
+        driver = Hooks.getDriver();
         homePage = new JpetHomePage(driver);
         
-        Hooks.test.info("Clicking Dog navbar element and returning to main menu.");
+        Hooks.getTest().info("Clicking Dog navbar element and returning to main menu.");
         homePage.dognavelement();
         homePage.returntomainmenu();
-        Hooks.test.pass("Dog navbar navigation sequence completed.");
+        Hooks.getTest().pass("Dog navbar navigation sequence completed.");
     }
 
     @When("user clicks the Reptile navbar element and clicks return to main menu")
     public void user_clicks_the_reptile_navbar_element_and_clicks_return_to_main_menu() {
-        driver = Hooks.driver;
+        driver = Hooks.getDriver();
         homePage = new JpetHomePage(driver);
         
-        Hooks.test.info("Clicking Reptile navbar element and returning to main menu.");
+        Hooks.getTest().info("Clicking Reptile navbar element and returning to main menu.");
         homePage.reptilenavelement();
         homePage.returntomainmenu();
-        Hooks.test.pass("Reptile navbar navigation sequence completed.");
+        Hooks.getTest().pass("Reptile navbar navigation sequence completed.");
     }
 
     @When("user clicks the Fish navbar element and clicks return to main menu")
     public void user_clicks_the_fish_navbar_element_and_clicks_return_to_main_menu() {
-        driver = Hooks.driver;
+        driver = Hooks.getDriver();
         homePage = new JpetHomePage(driver);
         
-        Hooks.test.info("Clicking Fish navbar element and returning to main menu.");
+        Hooks.getTest().info("Clicking Fish navbar element and returning to main menu.");
         homePage.fishnavelement();
         homePage.returntomainmenu();
-        Hooks.test.pass("Fish navbar navigation sequence completed.");
+        Hooks.getTest().pass("Fish navbar navigation sequence completed.");
     }
 
     @When("user clicks the Cart navbar element and clicks return to main menu")
     public void user_clicks_the_cart_navbar_element_and_clicks_return_to_main_menu() {
-        driver = Hooks.driver;
+        driver = Hooks.getDriver();
         homePage = new JpetHomePage(driver);
         
-        Hooks.test.info("Clicking Cart navbar element and returning to main menu.");
+        Hooks.getTest().info("Clicking Cart navbar element and returning to main menu.");
         homePage.cartnavelement();
         homePage.returntomainmenu();
-        Hooks.test.pass("Cart navbar navigation sequence completed.");
+        Hooks.getTest().pass("Cart navbar navigation sequence completed.");
     }
 
     @When("user clicks the My Orders navbar element")
     public void user_clicks_the_my_orders_navbar_element() {
-        driver = Hooks.driver;
+        driver = Hooks.getDriver();
         homePage = new JpetHomePage(driver);
         
-        Hooks.test.info("Clicking My Orders navbar element.");
+        Hooks.getTest().info("Clicking My Orders navbar element.");
         homePage.myordersnavelement();
-        Hooks.test.pass("My Orders navbar navigation sequence completed.");
+        Hooks.getTest().pass("My Orders navbar navigation sequence completed.");
     }
 
     // JpetHome feature for scenario imageNavigation
 
     @When("user clicks on the Bird image and clicks return to main menu")
     public void user_clicks_on_the_bird_image_and_clicks_return_to_main_menu() {
-        driver = Hooks.driver;
+        driver = Hooks.getDriver();
         homePage = new JpetHomePage(driver);
         
-        Hooks.test.info("Clicking Bird image link and returning to main menu.");
+        Hooks.getTest().info("Clicking Bird image link and returning to main menu.");
         homePage.birdimage();
         homePage.returntomainmenu();
-        Hooks.test.pass("Bird image navigation sequence completed.");
+        Hooks.getTest().pass("Bird image navigation sequence completed.");
     }
 
     @When("user clicks on the Fish image and clicks return to main menu")
     public void user_clicks_on_the_fish_image_and_clicks_return_to_main_menu() {
-        driver = Hooks.driver; 
+        driver = Hooks.getDriver(); 
         homePage = new JpetHomePage(driver);
         
-        Hooks.test.info("Clicking Fish image link and returning to main menu.");
+        Hooks.getTest().info("Clicking Fish image link and returning to main menu.");
         homePage.fishimage();
         homePage.returntomainmenu();
-        Hooks.test.pass("Fish image navigation sequence completed.");
+        Hooks.getTest().pass("Fish image navigation sequence completed.");
     }
 
     @When("user clicks on the Dog image and clicks return to main menu")
     public void user_clicks_on_the_dog_image_and_clicks_return_to_main_menu() {
-        driver = Hooks.driver; 
+        driver = Hooks.getDriver(); 
         homePage = new JpetHomePage(driver);
         
-        Hooks.test.info("Clicking Dog image link and returning to main menu.");
+        Hooks.getTest().info("Clicking Dog image link and returning to main menu.");
         homePage.dogimage();
         homePage.returntomainmenu();
-        Hooks.test.pass("Dog image navigation sequence completed.");
+        Hooks.getTest().pass("Dog image navigation sequence completed.");
     }
 
     @When("user clicks on the Reptile image and clicks return to main menu")
     public void user_clicks_on_the_reptile_image_and_clicks_return_to_main_menu() {
-        driver = Hooks.driver; 
+        driver = Hooks.getDriver(); 
         homePage = new JpetHomePage(driver);
         
-        Hooks.test.info("Clicking Reptile image link and returning to main menu.");
+        Hooks.getTest().info("Clicking Reptile image link and returning to main menu.");
         homePage.reptileimage();
         homePage.returntomainmenu();
-        Hooks.test.pass("Reptile image navigation sequence completed.");
+        Hooks.getTest().pass("Reptile image navigation sequence completed.");
     }
 
     @When("user clicks on the Cat image and clicks return to main menu")
     public void user_clicks_on_the_cat_image_and_clicks_return_to_main_menu() {
-        driver = Hooks.driver; 
+        driver = Hooks.getDriver(); 
         homePage = new JpetHomePage(driver);
         
-        Hooks.test.info("Clicking Cat image link and returning to main menu.");
+        Hooks.getTest().info("Clicking Cat image link and returning to main menu.");
         homePage.catimage();
         homePage.returntomainmenu();
-        Hooks.test.pass("Cat image navigation sequence completed.");
+        Hooks.getTest().pass("Cat image navigation sequence completed.");
     }
 
     // JpetHome feature for Account management scenario 
 
     @When("user clicks on the account icon and goes to my Account")
     public void user_clicks_on_the_account_icon_and_goes_to_my_account() {
-        driver = Hooks.driver;
+        driver = Hooks.getDriver();
         homePage = new JpetHomePage(driver);
         
-        Hooks.test.info("Navigating to My Account via profile icon utility link.");
+        Hooks.getTest().info("Navigating to My Account via profile icon utility link.");
         homePage.accountIcon();
         homePage.myAccount();
-        Hooks.test.pass("My Account context layout opened.");
+        Hooks.getTest().pass("My Account context layout opened.");
     }
 
     @When("user updates the password {string} and confirmpassword {string}")
     public void user_updates_the_password_and_confirmpassword(String pass, String confirmpass) {
-        Hooks.test.info("Updating profile credentials.");
+        Hooks.getTest().info("Updating profile credentials.");
         homePage.password(pass);
         homePage.confirmPassword(confirmpass);
         homePage.saveAccountBtn();
-        Hooks.test.pass("Password values applied and save action dispatched.");
+        Hooks.getTest().pass("Password values applied and save action dispatched.");
     }
 
     @Then("user should see the message {string}")
     public void user_should_see_the_message(String verificationtext) {
-    	Hooks.test.info("Waiting for alert notification panel displaying: " + verificationtext);
+    	Hooks.getTest().info("Waiting for alert notification panel displaying: " + verificationtext);
     	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     	By alertParagraphLocator = By.xpath("//div[contains(@class, 'alert-info')]/p");
     	try {
     		WebElement messageElement = wait.until(ExpectedConditions.visibilityOfElementLocated(alertParagraphLocator));
     		String actualText = messageElement.getText().trim();
     		if (actualText.equals(verificationtext)) {
-    			Hooks.test.pass("Profile update message verified successfully. Banner text matches expectation.");
+    			Hooks.getTest().pass("Profile update message verified successfully. Banner text matches expectation.");
     			
     		}
     		else 
     		{
-    			Hooks.test.fail("Profile update verification failed. Expected: [" + verificationtext + "], but got: [" + actualText + "]");
+    			Hooks.getTest().fail("Profile update verification failed. Expected: [" + verificationtext + "], but got: [" + actualText + "]");
     			}
     		Assert.assertEquals(actualText, verificationtext);
     		}
     	catch (Exception e) 
     	{
-    		Hooks.test.fail("Account alert validation step threw exception: " + e.getMessage());
+    		Hooks.getTest().fail("Account alert validation step threw exception: " + e.getMessage());
     		throw e;
     		}
     	}

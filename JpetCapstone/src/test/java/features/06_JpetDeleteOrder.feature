@@ -4,7 +4,7 @@ Feature: Order Delete Functionality
   @orderDelete @functional @destructive
   Scenario: Delete Existing Order Successfully
     Given the user is on the login page
-    When the user is logged in with valid username "Nagasai" and valid password "sai123"
+    When the user is logged in with valid username "j2ee" and valid password "j2ee"
     And clicks the login button
     When user clicks on My Orders
     And user selects an existing order
