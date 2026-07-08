@@ -41,9 +41,21 @@ public class RegisterStepDef {
 
     @When("User enters User ID {string}")
     public void user_enters_user_id(String userid) {
-        Hooks.test.info("Typing User ID: " + userid);
-        registerPage.enterUserId(userid);
-        Hooks.test.pass("User ID field filled.");
+        String finalUserId = userid;
+
+        // ONLY randomize if the scenario targets your new dynamic user profile marker
+        if (userid.equals("newdemo123")) {
+            String timestamp = String.valueOf(System.currentTimeMillis());
+            String randomSuffix = timestamp.substring(timestamp.length() - 5);
+            finalUserId = userid + randomSuffix;
+            Hooks.test.info("Generating a brand new unique account ID: " + finalUserId);
+        } else {
+            // Leave it static (e.g., "jpetuser123") so the app catches the existing record conflict
+            Hooks.test.info("Using static existing account ID to trigger warning: " + finalUserId);
+        }
+
+        registerPage.enterUserId(finalUserId);
+        Hooks.test.pass("User ID field populated successfully.");
     }
 
     @And("User enters Password {string}")
@@ -266,6 +278,37 @@ public class RegisterStepDef {
         verifyErrorMessageOnScreen(msg);
     }
     
+    
+    
+    @Then("User should see the existing user ID message {string}")
+    public void user_should_see_the_existing_user_id_message(String expectedWarning) {
+        // Synchronize and assign active driver context from Hooks
+        this.driver = Hooks.driver;
+        
+        Hooks.test.info("Scanning layout for duplicate user profile warning message: [" + expectedWarning + "]");
+        
+        // Wait up to 10 seconds for the form submit to process and render the warning message
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        
+        try {
+            boolean isWarningDisplayed = wait.until(
+                ExpectedConditions.textToBePresentInElementLocated(By.tagName("body"), expectedWarning.trim())
+            );
+            
+            if (isWarningDisplayed) {
+                Hooks.test.pass("Duplicate account validation verification successful. Message rendered: " + expectedWarning);
+            } else {
+                Hooks.test.fail("Duplicate validation failed! Missing expected message banner: " + expectedWarning);
+            }
+            
+            Assert.assertTrue("BUG DETECTED: The expected validation warning was absent: " + expectedWarning, isWarningDisplayed);
+            
+        } catch (Exception e) {
+            Hooks.test.fail("Duplicate verification step encountered a runtime error: " + e.getMessage());
+            throw e;
+        }
+    }
+
     
 
 }

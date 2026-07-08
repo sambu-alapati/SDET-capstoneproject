@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>24/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Jul 07 12:20:27 IST 2026</td>
+<td>Started on:</td><td>Wed Jul 08 14:04:17 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>533 seconds (533310 ms)</td>
+<tr><td>Total time:</td><td>25 seconds (25263 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,159 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Failed login with invalid or missing credentials", "User Login Functionality"</td>
-<td><div><pre>junit.framework.AssertionFailedError
-	at junit.framework.Assert.fail(Assert.java:55)
-	at junit.framework.Assert.assertTrue(Assert.java:22)
-	at junit.framework.Assert.assertTrue(Assert.java:31)
-	at stepDef.LoginAndLogoutStepDef.they_should_see_an_error_message(LoginAndLogoutStepDef.java:127)
-	at ✽.they should see an error message &quot;Enter password&quot;(file:///C:/Users/SA20696539/git/SDET-Capstone/JpetCapstone/src/test/java/features/02_JpetLoginAndLogout.feature:19)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1592618491", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1592618491'><pre>junit.framework.AssertionFailedError
-	at junit.framework.Assert.fail(Assert.java:55)
-	at junit.framework.Assert.assertTrue(Assert.java:22)
-	at junit.framework.Assert.assertTrue(Assert.java:31)
-	at stepDef.LoginAndLogoutStepDef.they_should_see_an_error_message(LoginAndLogoutStepDef.java:127)
-	at ✽.they should see an error message &quot;Enter password&quot;(file:///C:/Users/SA20696539/git/SDET-Capstone/JpetCapstone/src/test/java/features/02_JpetLoginAndLogout.feature:19)
-</pre></div></td>
-<td>12</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User Searchbar Functionality", "Home Page Functionalities"</td>
-<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.tagName: body to contain text &quot;Amazon Parrot&quot;. Current text: &quot;SAMPLE APPS
-GET INVOLVED
-MONITORING
-A FULL-STACK SAMPLE WEB APPLICATION BUILT ON TOP OF ASPECTRAN AND MYBATIS
-JPetStore Demo
-The goal of the JPetStore Demo App is to provide and demonstrate a sample web application that leverages Aspectran and MyBatis.
-Sample Apps
-JPetStore Demo
-Fish
-Dogs
-Reptiles
-Cats
-Birds
-AppMon
-?
-0 My Orders
-Welcome Naga!
-Fish
-Saltwater, Freshwater
-Dogs
-Various Breeds
-Cats
-Various Breeds, Exotic Varieties
-Reptiles
-Lizards, Turtles, Snakes
-Birds
-Exotic Varieties
-Pet Favorites
-Shop for more of your favorite pets here.
-Angelfish
-Tiger Shark
-Koi
-Goldfish
-aspectran.com
-mybatis.org
-ABOUT ASPECTRAN
-Aspectran is a lightweight, high‑performance framework for building both simple shell applications and large enterprise web services on the JVM.
-GET INVOLVED
-GitHub
-Copyright © 2008-present The Aspectran Project
-Powered by Aspectran 9.6.1-SNAPSHOT&quot;.
-(tried for 10 seconds with 500 milliseconds interval)
-Build info: version: &apos;4.44.0&apos;, revision: &apos;da2039b&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 21940, ms:edgeOptions: {debuggerAddress: localhost:49687}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\SA2069~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49687/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c4db7dbf4309b966080e3ab198197cea
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-	at stepDef.HomeStepDef.User_should_able_to_see_data_releated_to_it(HomeStepDef.java:50)
-	at ✽.User Should able to see data related to it(file:///C:/Users/SA20696539/git/SDET-Capstone/JpetCapstone/src/test/java/features/03_JpetHome.feature:13)
-</pre></div><a href='#' onClick='toggleBox("stack-trace576909528", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace576909528'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element found by By.tagName: body to contain text &quot;Amazon Parrot&quot;. Current text: &quot;SAMPLE APPS
-GET INVOLVED
-MONITORING
-A FULL-STACK SAMPLE WEB APPLICATION BUILT ON TOP OF ASPECTRAN AND MYBATIS
-JPetStore Demo
-The goal of the JPetStore Demo App is to provide and demonstrate a sample web application that leverages Aspectran and MyBatis.
-Sample Apps
-JPetStore Demo
-Fish
-Dogs
-Reptiles
-Cats
-Birds
-AppMon
-?
-0 My Orders
-Welcome Naga!
-Fish
-Saltwater, Freshwater
-Dogs
-Various Breeds
-Cats
-Various Breeds, Exotic Varieties
-Reptiles
-Lizards, Turtles, Snakes
-Birds
-Exotic Varieties
-Pet Favorites
-Shop for more of your favorite pets here.
-Angelfish
-Tiger Shark
-Koi
-Goldfish
-aspectran.com
-mybatis.org
-ABOUT ASPECTRAN
-Aspectran is a lightweight, high‑performance framework for building both simple shell applications and large enterprise web services on the JVM.
-GET INVOLVED
-GitHub
-Copyright © 2008-present The Aspectran Project
-Powered by Aspectran 9.6.1-SNAPSHOT&quot;.
-(tried for 10 seconds with 500 milliseconds interval)
-Build info: version: &apos;4.44.0&apos;, revision: &apos;da2039b&apos;
-System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.1&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 150.0.4078.48, fedcm:accounts: true, goog:processID: 21940, ms:edgeOptions: {debuggerAddress: localhost:49687}, msedge: {msedgedriverVersion: 150.0.4078.48 (6362dfa84aa4..., userDataDir: C:\Users\SA2069~1\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49687/devtoo..., se:cdpVersion: 150.0.4078.48, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: c4db7dbf4309b966080e3ab198197cea
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
-	at stepDef.HomeStepDef.User_should_able_to_see_data_releated_to_it(HomeStepDef.java:50)
-	at ✽.User Should able to see data related to it(file:///C:/Users/SA20696539/git/SDET-Capstone/JpetCapstone/src/test/java/features/03_JpetHome.feature:13)
-</pre></div></td>
-<td>23</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Failed login with invalid or missing credentials", "User Login Functionality"</td>
-<td><div><pre>junit.framework.AssertionFailedError
-	at junit.framework.Assert.fail(Assert.java:55)
-	at junit.framework.Assert.assertTrue(Assert.java:22)
-	at junit.framework.Assert.assertTrue(Assert.java:31)
-	at stepDef.LoginAndLogoutStepDef.they_should_see_an_error_message(LoginAndLogoutStepDef.java:127)
-	at ✽.they should see an error message &quot;Enter username&quot;(file:///C:/Users/SA20696539/git/SDET-Capstone/JpetCapstone/src/test/java/features/02_JpetLoginAndLogout.feature:19)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1402751024", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1402751024'><pre>junit.framework.AssertionFailedError
-	at junit.framework.Assert.fail(Assert.java:55)
-	at junit.framework.Assert.assertTrue(Assert.java:22)
-	at junit.framework.Assert.assertTrue(Assert.java:31)
-	at stepDef.LoginAndLogoutStepDef.they_should_see_an_error_message(LoginAndLogoutStepDef.java:127)
-	at ✽.they should see an error message &quot;Enter username&quot;(file:///C:/Users/SA20696539/git/SDET-Capstone/JpetCapstone/src/test/java/features/02_JpetLoginAndLogout.feature:19)
-</pre></div></td>
-<td>12</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -229,125 +76,15 @@ Session ID: c4db7dbf4309b966080e3ab198197cea
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Delete newly created order", "Checkout Functionality"</td>
-<td></td>
-<td>39</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add multiple items to cart", "Shopping Cart Functionality"</td>
-<td></td>
-<td>15</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify order number generation", "Checkout Functionality"</td>
-<td></td>
-<td>29</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Update cart after multiple modifications", "Shopping Cart Functionality"</td>
-<td></td>
-<td>18</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Image Navigation Functionality", "Home Page Functionalities"</td>
-<td></td>
-<td>15</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Succesful user Logout", "User Login Functionality"</td>
-<td></td>
-<td>10</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Remove specific item from multiple items", "Shopping Cart Functionality"</td>
-<td></td>
-<td>18</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Complete checkout with modified billing details", "Checkout Functionality"</td>
-<td></td>
-<td>31</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify checkout button is displayed", "Shopping Cart Functionality"</td>
-<td></td>
-<td>10</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
 <td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Delete Existing Order Successfully", "Order Delete Functionality"</td>
 <td></td>
-<td>23</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Update quantity for single item", "Shopping Cart Functionality"</td>
-<td></td>
-<td>12</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Add single item to cart", "Shopping Cart Functionality"</td>
-<td></td>
-<td>11</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify order details page", "Checkout Functionality"</td>
-<td></td>
-<td>30</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify mandatory field error messages", "User Registration"</td>
-<td></td>
-<td>10</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Register new user with valid details", "User Registration"</td>
-<td></td>
-<td>11</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User Searchbar Functionality using Enter Key", "Home Page Functionalities"</td>
-<td></td>
 <td>13</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User Account Management", "Home Page Functionalities"</td>
-<td></td>
-<td>13</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Complete checkout using default details", "Checkout Functionality"</td>
-<td></td>
-<td>37</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Remove all items from cart", "Shopping Cart Functionality"</td>
-<td></td>
-<td>26</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Failed login with invalid or missing credentials", "User Login Functionality"</td>
-<td></td>
-<td>13</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Successful login with valid credentials", "User Login Functionality"</td>
-<td></td>
-<td>11</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Remove single item from cart", "Shopping Cart Functionality"</td>
-<td></td>
-<td>33</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
+<td>runner.JpetRunner@15f47664</td></tr>
 <tr>
 <td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Verify No Orders Message", "Order Delete Functionality"</td>
 <td></td>
-<td>25</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
-<tr>
-<td title='runner.JpetRunner.runScenario()'><b>runScenario</b><br>Test class: runner.JpetRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Navbar Elements Navigation", "Home Page Functionalities"</td>
-<td></td>
-<td>17</td>
-<td>runner.JpetRunner@5b94b04d</td></tr>
+<td>11</td>
+<td>runner.JpetRunner@15f47664</td></tr>
 </table><p>
 </body>
 </html>

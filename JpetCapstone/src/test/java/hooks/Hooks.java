@@ -15,6 +15,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import utils.ExtentManager;
 import utils.ScreenshotUtil;
+import utils.allureScreenshotUtil;
 
 public class Hooks {
 	
@@ -56,6 +57,8 @@ public class Hooks {
                 // Embed/Attach the image to the Cucumber HTML report
                 scenario.attach(screenshot, "image/png", scenario.getName());
                 System.out.println("Screenshot embedded in cucumber report successfully.");
+                
+                allureScreenshotUtil.captureScreenshot(driver);
                 
             } catch (Exception e) {
                 System.out.println("Exception while taking screenshot: " + e.getMessage());

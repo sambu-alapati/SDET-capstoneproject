@@ -22,26 +22,59 @@ public class HomeStepDef {
     private JpetHomePage homePage;
       
     // JpetHome feature for scenario for user search bar functionality 
+    
+    // Core Shared Locator Map - Kept localized to guarantee dynamic runtime relocation
+    private final By searchFieldLocator = By.xpath("//form[contains(@action,'searchProducts')]//input[@name='keyword']");
+    private final By searchButtonLocator = By.xpath("//form[contains(@action,'searchProducts')]//button|//input[@type='submit']|//form[contains(@action,'searchProducts')]//input[@type='image']");
+      
+    /**
+     * Lazy-initialization utility method. Ensures that we always pull a live, 
+     * synchronized session driver instance across fragmented test blocks.
+     */
+    private JpetHomePage getHomePage() {
+        this.driver = Hooks.driver;
+        if (this.homePage == null) {
+            this.homePage = new JpetHomePage(this.driver);
+        }
+        return this.homePage;
+    }
+
+    // =========================================================================
+    // JpetHome feature for scenario for user search bar functionality 
+    // =========================================================================
 
     @When("User enter {string} bird in searchbar")
     public void user_enter_bird_in_searchbar(String text) {
-         driver = Hooks.driver;
-         homePage = new JpetHomePage(driver);
+         getHomePage(); // Synced driver reference allocation
          
          Hooks.test.info("Entering text into searchbar: " + text);
-         homePage.searchbar(text);
+         
+         // Explicit wait shield to guarantee form input readiness
+         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+         WebElement inputElement = wait.until(ExpectedConditions.elementToBeClickable(searchFieldLocator));
+         
+         inputElement.clear();
+         inputElement.sendKeys(text);
+         
          Hooks.test.pass("Search text entered successfully.");
     }
 
     @And("Clicks the search button")
     public void Clicks_the_search_button() {
-        Hooks.test.info("Clicking the search button.");
-        homePage.searchBtn();
-        Hooks.test.pass("Search button clicked.");
+        getHomePage();
+        Hooks.test.info("Clicking the search button layout element.");
+        
+        // Dynamic wait check to clear timing mismatches
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement searchBtn = wait.until(ExpectedConditions.elementToBeClickable(searchButtonLocator));
+        
+        searchBtn.click();
+        Hooks.test.pass("Search button clicked and navigation dispatched.");
     }
 
     @Then("User Should able to see data related to it")
     public void User_should_able_to_see_data_releated_to_it() {
+        getHomePage();
         String expectedText = "Amazon Parrot"; 
         Hooks.test.info("Verifying search results contain expected text: " + expectedText);
         
@@ -61,22 +94,53 @@ public class HomeStepDef {
             throw e;
         }
     }
+    
+    // =========================================================================
+    // jpethome feature for scenario for all animal search bar function using keys
+    // =========================================================================
 
+    @Then("User Should able to see data related to it with expected text {string}")
+    public void user_should_able_to_see_data_related_to_it_with_expected_text(String expectedBreed) {
+        getHomePage();
+        Hooks.test.info("Scanning page layout table for expected data string: [" + expectedBreed + "]");
+        
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        try {
+            boolean isTextPresent = wait.until(
+                ExpectedConditions.textToBePresentInElementLocated(By.tagName("body"), expectedBreed)
+            );
+            
+            if (isTextPresent) {
+                Hooks.test.pass("Search results table verified successfully. Found target item: " + expectedBreed);
+            } else {
+                Hooks.test.fail("Search results layout verification failed. Missing text marker: " + expectedBreed);
+            }
+            
+            Assert.assertTrue("BUG DETECTED: The search results table did not contain the expected text: " + expectedBreed, isTextPresent);
+            
+        } catch (Exception e) {
+            Hooks.test.fail("Assertion step encountered an unexpected runtime exception: " + e.getMessage());
+            throw e;
+        }
+    }
+
+    // =========================================================================
     // jpethome feature for scenario search bar function using enter keys 
+    // =========================================================================
 
     @And("Presses the Enter key on the keyboard")
     public void Presses_the_Enter_key_on_the_keyboard() throws InterruptedException {
+        getHomePage();
         Hooks.test.info("Executing search bar interaction using keyboard Enter key.");
-        homePage.searchbarusingkeys();
         
-        WebElement searchBox = new WebDriverWait(driver, Duration.ofSeconds(10))
-                .until(ExpectedConditions.elementToBeClickable(
-                    By.xpath("//form[contains(@action,'searchProducts')]//input[@name='keyword']")
-                ));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebElement searchBox = wait.until(ExpectedConditions.elementToBeClickable(searchFieldLocator));
 
-        searchBox.sendKeys("Amazon Parrot");
+        // Submit the search query by executing native Selenium keyboard inputs directly on the active input element
+        searchBox.sendKeys(org.openqa.selenium.Keys.ENTER);
         Hooks.test.pass("Search action via Enter key processed.");
     }
+
 
     // jpethome feature for scenario Navbar elements navigation
 
@@ -259,4 +323,10 @@ public class HomeStepDef {
     		throw e;
     		}
     	}
+    
+    
+    
+
+
+    
     }

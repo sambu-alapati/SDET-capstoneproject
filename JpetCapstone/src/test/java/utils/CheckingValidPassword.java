@@ -38,6 +38,8 @@ public class CheckingValidPassword {
 	     String pass=sc.nextLine();
 	    // System.out.println(isValidpassword(pass));
 	     isValidpassword(pass);
+	     
+	     sc.close();
 
 	}
 
