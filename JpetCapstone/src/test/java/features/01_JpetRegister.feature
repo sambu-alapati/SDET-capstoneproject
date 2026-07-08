@@ -44,7 +44,7 @@ Feature: User Registration
     And Country error message should be displayed as "must not be blank"
     
   @register @validation @negative @duplicate-user
-  Scenario Outline: Verify existing user ID message
+  Scenario Outline: Verify existing user ID message 
     Given User is on JPetStore Registration page
     When User enters User ID "<userid>"
     And User enters Password "<password>"

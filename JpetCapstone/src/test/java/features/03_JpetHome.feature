@@ -1,4 +1,4 @@
-@regression @home-feature
+@regression
 Feature: Home Page Functionalities 
 
   Background:
@@ -15,7 +15,7 @@ Feature: Home Page Functionalities
     
     
   @search @category-search @functional @data-driven @enterkey
-  Scenario Outline: Verify search results table content when searching by broad pet categories using Enter Key
+  Scenario Outline: User Searchbar Functionality for pet categories using Enter Key 
     When User enter "<category>" bird in searchbar
     And Presses the Enter key on the keyboard
     Then User Should able to see data related to it with expected text "<expected_breed>"
@@ -29,13 +29,13 @@ Feature: Home Page Functionalities
       | dogs     | Bulldog        |
       | reptiles | Rattlesnake    |
     
-  @search @enterkey @functional @ui-interaction
-  Scenario: User Searchbar Functionality using Enter Key
+  @search @enterkey @functional 
+  Scenario: User Searchbar Functionality for specific pet using Enter Key 
     When User enter "Amazon Parrot" bird in searchbar
     And Presses the Enter key on the keyboard
     Then User Should able to see data related to it with expected text "Amazon Parrot"
 
-  @navbarelementsNavigation @ui-navigation @sanity
+  @navbarelementsNavigation  @sanity
   Scenario: Navbar Elements Navigation 
     When user clicks the Bird navbar element and clicks return to main menu 
     When user clicks the Cat navbar element and clicks return to main menu
@@ -45,7 +45,7 @@ Feature: Home Page Functionalities
     When user clicks the Cart navbar element and clicks return to main menu 
     When user clicks the My Orders navbar element 
 
-  @imageNavigation @ui-navigation
+  @imageNavigation 
   Scenario: Image Navigation Functionality 
     When user clicks on the Bird image and clicks return to main menu 
     When user clicks on the Fish image and clicks return to main menu

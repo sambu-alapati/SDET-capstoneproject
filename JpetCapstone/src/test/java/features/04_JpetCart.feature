@@ -1,4 +1,4 @@
-@regression @cart-feature @cart
+@regression @cart
 Feature: Shopping Cart Functionality
  
   Background:
@@ -65,7 +65,7 @@ Feature: Shopping Cart Functionality
     Then quantity should be updated to "4"
     And cart should contain 1 item
  
-  @checkout-validation @positive @ui-verification
+  @checkout-validation @positive 
   Scenario: Verify checkout button is displayed
     When user selects "Fish" category
     And user selects first product

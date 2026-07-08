@@ -5,14 +5,14 @@ Feature: Checkout Functionality
     Given user is logged in
     And user has 1 item in cart
  
-  @smoke @sanity @order-placement @critical-path
+  @smoke @sanity 
   Scenario: Complete checkout using default details
     When user proceeds to checkout
     And user continues with default checkout details
     And user confirms the order
     Then order should be placed successfully
  
-  @order-placement @functional
+  @functional
   Scenario: Complete checkout with modified billing details
     When user proceeds to checkout
     And user updates checkout details
@@ -20,14 +20,14 @@ Feature: Checkout Functionality
     And user confirms the order
     Then order should be placed successfully
  
-  @order-validation @functional @data-verification
+  @order-validation @functional 
   Scenario: Verify order number generation
     When user proceeds to checkout
     And user continues with default checkout details
     And user confirms the order
     Then order number should be generated
  
-  @order-validation @ui-verification
+  @order-validation 
   Scenario: Verify order details page
     When user proceeds to checkout
     And user continues with default checkout details

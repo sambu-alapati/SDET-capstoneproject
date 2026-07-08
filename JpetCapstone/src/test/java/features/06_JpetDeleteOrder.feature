@@ -11,7 +11,7 @@ Feature: Order Delete Functionality
     And user clicks on the Delete Order button
     Then order should be deleted successfully
    
-  @noOrders @ui-validation @positive @boundary
+  @noOrders @positive 
   Scenario: Verify No Orders Message
     Given the user is on the login page
     When the user is logged in with valid username "zeroorders" and valid password "sai123"
