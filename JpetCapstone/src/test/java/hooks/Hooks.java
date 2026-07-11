@@ -1,12 +1,17 @@
 package hooks;
 
 import java.time.Duration;
+
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
+
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
@@ -35,7 +40,10 @@ public class Hooks {
     public void setup(Scenario scenario) {
         System.out.println("Launching browser on thread: " + Thread.currentThread().getId());
         
-        WebDriver driver = new EdgeDriver();
+        
+       
+        WebDriver driver = new EdgeDriver(); 
+        
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         

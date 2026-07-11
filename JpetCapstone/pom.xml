@@ -42,7 +42,7 @@
     </dependency>
     
     
-    
+  
       
     <!-- Source: https://mvnrepository.com/artifact/junit/junit -->
 <dependency>
@@ -284,10 +284,7 @@
         <suiteXmlFiles>
             <suiteXmlFile>testng.xml</suiteXmlFile>
         </suiteXmlFiles>
-        
-        <!-- FORCE REJECTION OF MULTIPLIER: Keeps execution fixed to 3 total browsers -->
-        <perCoreThreadCount>false</perCoreThreadCount>
-        
+         
         <properties>
             <property>
                 <name>dataproviderthreadcount</name>
